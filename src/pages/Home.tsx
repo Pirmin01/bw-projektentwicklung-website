@@ -7,7 +7,7 @@ const LEISTUNGEN = [
   },
   {
     title: "Neubau-Projektentwicklung",
-    text: "Für Mehrfamilienhäuser und Wohnanlagen übernehmen wir die Projektsteuerung und geben den Bauauftrag an unseren Baupartner, die S. Burger Bauunternehmen GmbH, weiter – Entwicklung und Bau aus einer Hand.",
+    text: "Für Mehrfamilienhäuser und Wohnanlagen übernehmen wir die Projektsteuerung: Planung, Genehmigungsverfahren und Koordination bis zur Baureife.",
   },
   {
     title: "Bestandsentwicklung",
@@ -38,9 +38,8 @@ export function Home() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-muted-fg">
             BW Projektentwicklung entwickelt Grundstücke und Neubauprojekte im Raum
-            Freiburg/Breisgau – von der ersten Standortprüfung bis zur
-            schlüsselfertigen Übergabe, in enger Zusammenarbeit mit der S. Burger
-            Bauunternehmen GmbH als Baupartner.
+            Freiburg/Breisgau – von der ersten Standortprüfung bis zur baureifen
+            Planung.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -66,7 +65,7 @@ export function Home() {
             <p className="text-sm font-semibold tracking-wide text-brand-petrol">
               Leistungen
             </p>
-            <h2 className="mt-2 text-3xl">Projektentwicklung aus einer Hand</h2>
+            <h2 className="mt-2 text-3xl">Unsere Leistungen</h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -132,12 +131,12 @@ export function Home() {
                 BW Projektentwicklung ist ein junges, inhabergeführtes Unternehmen im
                 Raum Freiburg, gegründet von den Brüdern Pirmin und Pius Burger. Wir
                 konzentrieren uns auf Projektentwicklung im Breisgau: vom
-                Grundstücksankauf über die Planung bis zur Übergabe.
+                Grundstücksankauf über die Planung bis zur Baureife.
               </p>
               <p>
-                Für die bauliche Umsetzung arbeiten wir eng mit unserem Baupartner,
-                der S. Burger Bauunternehmen GmbH, zusammen – Entwicklung und Bau aus
-                einer Hand, ohne Reibungsverluste an der Schnittstelle.
+                Jedes Projekt prüfen wir einzeln auf Lage, Baurecht und
+                Marktpotenzial, bevor wir es weiterentwickeln – sorgfältig statt
+                schnell.
               </p>
             </div>
           </div>

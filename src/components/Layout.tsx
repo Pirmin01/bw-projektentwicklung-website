@@ -90,7 +90,7 @@ export function Layout() {
             </p>
             <p className="mt-3 text-sm leading-relaxed text-brand-muted-fg">
               Grundstücke und Neubauprojekte im Raum Freiburg/Breisgau – von der
-              Standortprüfung bis zur schlüsselfertigen Übergabe.
+              Standortprüfung bis zur baureifen Planung.
             </p>
           </div>
 
@@ -160,8 +160,7 @@ export function Layout() {
 
         <div className="border-t border-brand-border px-6 py-6">
           <p className="mx-auto max-w-6xl text-xs text-brand-muted-fg">
-            © {new Date().getFullYear()} BW Projektentwicklung — Baupartner: S. Burger
-            Bauunternehmen GmbH
+            © {new Date().getFullYear()} BW Projektentwicklung
           </p>
         </div>
       </footer>
