@@ -14,8 +14,11 @@ export function Layout() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 border-b border-brand-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link to="/" className="font-heading text-lg font-bold text-brand-charcoal">
-            BW <span className="text-brand-petrol">Projektentwicklung</span>
+          <Link to="/" className="flex items-center gap-2.5" aria-label="BW Projektentwicklung, zur Startseite">
+            <img src="/logo-bw.png" alt="" className="h-9 w-9" />
+            <span className="font-heading text-lg font-semibold text-brand-petrol">
+              Projektentwicklung
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -85,9 +88,12 @@ export function Layout() {
       <footer className="border-t border-brand-border bg-brand-surface">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 md:grid-cols-4">
           <div>
-            <p className="font-heading text-base font-bold text-brand-charcoal">
-              BW <span className="text-brand-petrol">Projektentwicklung</span>
-            </p>
+            <div className="flex items-center gap-2">
+              <img src="/logo-bw.png" alt="" className="h-7 w-7" />
+              <p className="font-heading text-base font-semibold text-brand-petrol">
+                Projektentwicklung
+              </p>
+            </div>
             <p className="mt-3 text-sm leading-relaxed text-brand-muted-fg">
               Grundstücke und Neubauprojekte im Raum Freiburg/Breisgau – von der
               Standortprüfung bis zur baureifen Planung.

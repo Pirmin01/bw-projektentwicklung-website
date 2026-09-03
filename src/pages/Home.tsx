@@ -25,7 +25,7 @@ export function Home() {
 
     const subject = encodeURIComponent(`Kontaktanfrage von ${name}`);
     const body = encodeURIComponent(`${message}\n\n—\n${name}\n${email}`);
-    window.location.href = `mailto:kontakt@bwprojektentwicklung.de?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@bwprojektentwicklung.de?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -162,10 +162,10 @@ export function Home() {
                   <dt className="font-medium">E-Mail:</dt>
                   <dd>
                     <a
-                      href="mailto:kontakt@bwprojektentwicklung.de"
+                      href="mailto:info@bwprojektentwicklung.de"
                       className="hover:text-brand-petrol"
                     >
-                      kontakt@bwprojektentwicklung.de
+                      info@bwprojektentwicklung.de
                     </a>
                   </dd>
                 </div>
