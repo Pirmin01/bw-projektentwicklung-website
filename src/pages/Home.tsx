@@ -129,9 +129,10 @@ export function Home() {
             <div className="space-y-4 text-base leading-relaxed text-brand-muted-fg">
               <p>
                 BW Projektentwicklung ist ein junges, inhabergeführtes Unternehmen im
-                Raum Freiburg, gegründet von den Brüdern Pirmin und Pius Burger. Wir
-                konzentrieren uns auf Projektentwicklung im Breisgau: vom
-                Grundstücksankauf über die Planung bis zur Baureife.
+                Raum Freiburg, gegründet von den Brüdern Pirmin und Pius Burger
+                gemeinsam mit ihrem Cousin Marius Wernet. Wir konzentrieren uns auf
+                Projektentwicklung im Breisgau: vom Grundstücksankauf über die
+                Planung bis zur Baureife.
               </p>
               <p>
                 Jedes Projekt prüfen wir einzeln auf Lage, Baurecht und
