@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bwprojektentwicklung.de/sitemap.xml
+Sitemap: https://www.bwprojektentwicklung.de/sitemap.xml
