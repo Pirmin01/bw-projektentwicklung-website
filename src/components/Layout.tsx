@@ -3,7 +3,8 @@ import { Link, Outlet } from "react-router-dom";
 
 const NAV_LINKS = [
   { href: "/#leistungen", label: "Leistungen" },
-  { href: "/#projekte", label: "Projekte" },
+  { href: "/#referenzen", label: "Eindrücke" },
+  { href: "/#ablauf", label: "Ablauf" },
   { href: "/#ueber-uns", label: "Über uns" },
 ];
 
@@ -12,6 +13,12 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <a
+        href="#inhalt"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:shadow-karte"
+      >
+        Zum Inhalt springen
+      </a>
       <header className="sticky top-0 z-40 border-b border-brand-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link to="/" aria-label="BW Projektentwicklung, zur Startseite">
@@ -78,7 +85,7 @@ export function Layout() {
         )}
       </header>
 
-      <main className="flex-1">
+      <main id="inhalt" className="flex-1">
         <Outlet />
       </main>
 
@@ -87,7 +94,7 @@ export function Layout() {
           <div>
             <img src="/logo-horizontal.png" alt="BW Projektentwicklung" className="h-10 w-auto" />
             <p className="mt-3 text-sm leading-relaxed text-brand-muted-fg">
-              Grundstücke und Neubauprojekte im Raum Freiburg/Breisgau – von der
+              Wohn- und Gewerbeimmobilien in Freiburg und Umgebung – von der
               Standortprüfung bis zur baureifen Planung.
             </p>
           </div>
@@ -102,12 +109,17 @@ export function Layout() {
               </li>
               <li>
                 <a href="/#leistungen" className="hover:text-brand-petrol">
-                  Neubau-Projektentwicklung
+                  Wohnungsbau
                 </a>
               </li>
               <li>
                 <a href="/#leistungen" className="hover:text-brand-petrol">
                   Bestandsentwicklung
+                </a>
+              </li>
+              <li>
+                <a href="/#leistungen" className="hover:text-brand-petrol">
+                  Gewerbeimmobilien
                 </a>
               </li>
             </ul>

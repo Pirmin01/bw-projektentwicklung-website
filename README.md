@@ -1,44 +1,51 @@
 # BW Projektentwicklung — Website
 
-Reine Firmen-Website für **bwprojektentwicklung.de** (Domain noch nicht registriert).
-Kein Login, keine Datenbank — vollständig statisch.
+Firmen-Website für **bwprojektentwicklung.de**. Keine Datenbank, kein Login, keine Cookies.
+Statisch ausgeliefert, dazu **eine** Server-Funktion für das Kontaktformular (`api/kontakt.ts`).
 
 Abgegrenzt von:
-- **Projektentwicklungs-Tool** (`burger-projektentwicklung`) — internes Werkzeug mit Datenbank/Login, eigenes Repo.
-- **BurgerHaus Invest** (`burgerhaus-invest.de`) — öffentlicher Exposé-Marktplatz mit eigener Datenbank, eigenes Repo.
+- **Projektentwicklungs-Tool** (internes Werkzeug mit Datenbank/Login, eigenes Repo/Projekt).
+- **BurgerHaus Invest** (`burgerhaus-invest.de`) — Exposé-Marktplatz, eigenes Repo/Projekt.
 
-Details zur Trennung: `Pirmin's Brain/03 Geschäfte/Digitale Struktur (Websites & Tools).md`.
+Zuordnung der Bausteine: `Pirmin's Brain/03 Unternehmen/Digitale Struktur (Websites & Tools).md`.
 
 ## Stack
 
-- Vite 8 + React 19 + TypeScript
-- Tailwind CSS 4 (`@tailwindcss/vite`, kein `postcss.config`)
-- react-router-dom (Client-Routing, SPA-Rewrite in `vercel.json` für `/impressum`, `/datenschutz`)
-- Schriften selbst gehostet über `@fontsource/work-sans` + `@fontsource/montserrat` (kein Google-Fonts-CDN)
+- Vite 8 + React 19 + TypeScript, Tailwind CSS 4, react-router-dom
+- Schriften selbst gehostet (`@fontsource/work-sans`, `@fontsource/montserrat`), kein Google-Fonts-CDN
+- Design-Tokens aus dem Projektentwicklungs-Tool (Petrol `#1f6f76`, Anthrazit `#262626`, Beige `#f4f2ef`)
+- Fotos in `public/bilder/` (je 800/1600 px, Titelbild zusätzlich 2400 px); Liste und Alt-Texte in `src/lib/bilder.ts`
 
-Design-Tokens 1:1 aus dem Projektentwicklungs-Tool übernommen (heutiger Petrol-Stand:
-`#1f6f76` Akzent, `#262626` Anthrazit für Haupt-Buttons, `#f4f2ef` Beige nur für
-Module/Felder, nie die ganze Fläche). Quelle: `src/styles.css` im Tool-Repo.
+## Kontaktformular
+
+`POST /api/kontakt` prüft die Eingaben (Pflichtfelder, Honigtopf, Mindestzeit, Herkunft) und schickt sie
+über **Resend** als E-Mail an `info@bwprojektentwicklung.de`. Es wird nichts gespeichert.
+
+Umgebungsvariablen (Vercel → Project → Settings → Environment Variables, Production):
+
+| Name | Pflicht | Zweck |
+|---|---|---|
+| `RESEND_API_KEY` | ja | Ohne ihn zeigt das Formular „nicht erreichbar“ + E-Mail-Adresse (kein Datenverlust, aber nichts geht raus) |
+| `KONTAKT_ABSENDER` | nein | Standard `BW Projektentwicklung <info@bwprojektentwicklung.de>` — die Domain muss bei Resend verifiziert sein |
+| `KONTAKT_EMPFAENGER` | nein | Standard `info@bwprojektentwicklung.de` |
 
 ## Befehle
 
 ```bash
 npm install
-npm run dev      # lokal unter http://localhost:5173
+npm run dev      # http://localhost:5173 (ohne /api — das Formular zeigt dort den Ausweichhinweis)
 npm run build    # Typecheck + Produktions-Build nach dist/
-npm run lint      # oxlint
+npm run lint
 ```
 
-## Offene Punkte vor dem Go-Live
+## Offen vor dem Umschalten der Domain `bwprojektentwicklung.de`
 
-Im Code klar mit gelb hinterlegten `TODO`-Markierungen versehen (`Impressum.tsx`,
-`Datenschutz.tsx`) — nicht raten, sondern von Pirmin/Pius bestätigen lassen:
+Die Domain zeigt derzeit noch auf einen GoDaddy-Websitebaukasten; E-Mail läuft über Microsoft 365 (MX-Einträge
+dürfen beim Umstellen **nicht** angefasst werden). Zu klären, im Code als gelbe `TODO`-Markierungen sichtbar
+(`Impressum.tsx`, `Datenschutz.tsx`):
 
-- Rechtsform, Anschrift, Registereintrag (oder „in Gründung"), USt-IdNr., Telefon
-- Echte Kontakt-E-Mail statt Platzhalter `kontakt@bwprojektentwicklung.de`
-- Rechtliche Gegenprüfung von Impressum & Datenschutzerklärung
-- Welches Logo (falls eines der beiden vorhandenen) für diese Website verwendet wird
-- Konkrete Projekte/Referenzen mit Bildern für den Abschnitt „Projekte"
-
-Danach: GitHub-Repo anlegen, Vercel-Projekt verbinden, Domain `bwprojektentwicklung.de`
-(Registrierung durch Pirmin über GoDaddy) auf das Vercel-Projekt zeigen lassen.
+- Rechtsform, Anschrift, Registereintrag („in Gründung“?), USt-IdNr.
+- `RESEND_API_KEY` setzen und `bwprojektentwicklung.de` bei Resend verifizieren (DNS-Einträge)
+- Auftragsverarbeitung mit Resend prüfen und in der Datenschutzerklärung benennen
+- Rechtliche Gegenprüfung von Impressum, Datenschutz und der Texte zur Bauausführung („Sie entscheiden, wer baut“)
+- Bildrechte/Bildnachweis der Fotos klären (`BILDNACHWEIS` in `src/lib/bilder.ts`)

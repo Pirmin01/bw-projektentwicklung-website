@@ -29,7 +29,7 @@ export function Datenschutz() {
         <div>
           <h2 className="text-lg">2. Was diese Website macht – und was nicht</h2>
           <p className="mt-3">
-            Diese Website ist eine reine Informationsseite. Sie hat keinen
+            Diese Website ist eine Informationsseite mit Kontaktformular. Sie hat keinen
             Nutzerbereich, keine Anmeldung und keine Datenbank. Wir setzen{" "}
             <strong>keine Cookies</strong> und{" "}
             <strong>keine Analyse-, Tracking- oder Werbewerkzeuge</strong> ein. Es
@@ -105,24 +105,35 @@ export function Datenschutz() {
         <div>
           <h2 className="text-lg">5. Kontaktaufnahme</h2>
           <p className="mt-3">
-            Das Kontaktformular auf dieser Website überträgt Ihre Eingaben{" "}
-            <strong>nicht</strong> an unseren Server und speichert sie nicht in einer
-            Datenbank. Beim Absenden öffnet sich Ihr eigenes E-Mail-Programm mit einer
-            vorausgefüllten Nachricht; der Versand erfolgt über Ihr persönliches
-            E-Mail-Postfach. Sie behalten die Nachricht also bis zum Absenden
-            vollständig in der Hand.
+            Wenn Sie das Kontaktformular nutzen, übermittelt Ihr Browser Ihre Eingaben
+            (Name, E-Mail-Adresse, optional Telefonnummer, gewähltes Anliegen und Ihre
+            Nachricht) an unsere Website. Diese leitet die Angaben sofort als E-Mail an
+            unser Postfach weiter. Die Angaben werden{" "}
+            <strong>nicht in einer Datenbank gespeichert</strong> und nicht für andere
+            Zwecke verwendet. Zum Versand der E-Mail setzen wir den Dienst Resend
+            (Resend, Inc., USA) ein, der die Nachricht in unserem Auftrag zustellt.{" "}
+            <Todo>
+              Auftragsverarbeitungsvertrag mit Resend und Rechtsgrundlage der
+              USA-Übermittlung prüfen und hier benennen
+            </Todo>
           </p>
           <p className="mt-3">
-            Schreiben Sie uns per E-Mail, verarbeiten wir die von Ihnen mitgeteilten
-            Daten – in der Regel Name, E-Mail-Adresse und Inhalt der Nachricht –
-            ausschließlich zur Bearbeitung Ihres Anliegens und für mögliche
+            Zum Schutz vor automatisierten Anfragen (Spam) prüft das Formular technisch,
+            ob es von einem Menschen ausgefüllt wurde. Dazu werden keine Cookies
+            gesetzt und keine Daten an Dritte übermittelt.
+          </p>
+          <p className="mt-3">
+            Schreiben Sie uns stattdessen direkt per E-Mail, verarbeiten wir die von
+            Ihnen mitgeteilten Daten – in der Regel Name, E-Mail-Adresse und Inhalt der
+            Nachricht – ausschließlich zur Bearbeitung Ihres Anliegens und für mögliche
             Anschlussfragen.
           </p>
           <p className="mt-3">
             <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO, wenn Ihre
             Anfrage der Vorbereitung oder Durchführung eines Vertrags dient,
             andernfalls Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
-            Beantwortung von Anfragen).{" "}
+            Beantwortung von Anfragen). Mit dem Absenden des Formulars bestätigen Sie
+            zusätzlich, dass Sie diese Erklärung gelesen haben.{" "}
             <strong>Speicherdauer:</strong> Anfragen, die zu keiner
             Geschäftsbeziehung führen, löschen wir spätestens sechs Monate nach dem
             letzten Kontakt. Entsteht aus der Anfrage ein Vertragsverhältnis, gelten
@@ -182,10 +193,9 @@ export function Datenschutz() {
         <div>
           <h2 className="text-lg">9. Stand und Änderungen</h2>
           <p className="mt-3">
-            Diese Datenschutzerklärung beschreibt den aktuellen Stand dieser Website.
-            Ändern wir die Website technisch – etwa durch ein Reichweiten-Werkzeug
-            oder ein serverseitiges Kontaktformular –, passen wir die Erklärung
-            vorher entsprechend an.
+            Diese Datenschutzerklärung beschreibt den aktuellen Stand dieser Website
+            (Oktober 2026). Ändern wir die Website technisch – etwa durch ein
+            Reichweiten-Werkzeug –, passen wir die Erklärung vorher entsprechend an.
           </p>
         </div>
       </div>

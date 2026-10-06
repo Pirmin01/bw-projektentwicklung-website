@@ -97,3 +97,59 @@
     color: inherit;
   }
 }
+
+/* ---------- Bewegung (nur wenn gewünscht) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal-sichtbar {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-bild {
+  animation: hero-zoom 24s ease-out both;
+}
+.hero-einblenden {
+  animation: hero-ein 0.9s ease-out both;
+}
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes hero-ein {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-sichtbar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-bild,
+  .hero-einblenden {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-petrol);
+  outline-offset: 2px;
+}

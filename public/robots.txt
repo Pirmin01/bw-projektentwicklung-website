@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bwprojektentwicklung.de/sitemap.xml
