@@ -91,6 +91,16 @@
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--brand-charcoal);
+    /* Lange deutsche Wörter (z. B. „Grundstücksentwicklung“) dürfen nie aus ihrer Karte laufen */
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  p,
+  li,
+  dt,
+  dd {
+    overflow-wrap: break-word;
   }
 
   a {

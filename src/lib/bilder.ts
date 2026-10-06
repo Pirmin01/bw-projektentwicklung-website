@@ -20,24 +20,24 @@ export const BILDNACHWEIS =
 
 export const GALERIE: Bild[] = [
   {
-    name: "haus-holz-veranda",
-    alt: "Einfamilienhaus mit dunkler Holzfassade und umlaufender weißer Veranda in der Landschaft",
-    titel: "Holzhaus mit umlaufender Veranda",
+    name: "mfh-waldkirch-ecke",
+    alt: "Neubau-Mehrfamilienhaus mit weißer Putzfassade, grauen Akzentflächen und dunklen Balkonen unter blauem Himmel",
+    titel: "Mehrfamilienhaus in Waldkirch",
   },
   {
     name: "haus-hang-sonnensegel",
     alt: "Modernes Einfamilienhaus in Hanglage mit Terrasse und grünen Sonnensegeln",
-    titel: "Einfamilienhaus in Hanglage",
+    titel: "Wohnhaus in Hanglage",
   },
   {
-    name: "haus-hang-teich",
-    alt: "Weißes Einfamilienhaus mit Solardach, Terrasse und Naturteich",
-    titel: "Wohnhaus mit Terrasse und Naturteich",
+    name: "mfh-waldkirch-balkon",
+    alt: "Balkone mit dunklem Aluminiumgeländer an einer weißen Fassade, von unten fotografiert",
+    titel: "Balkone und Fassadendetail",
   },
   {
-    name: "mfh-neubau",
-    alt: "Neubau eines Mehrfamilienhauses mit weißer Fassade und dunklen Balkonen",
-    titel: "Neubau Mehrfamilienhaus",
+    name: "mfh-waldkirch-front",
+    alt: "Frontansicht eines dreigeschossigen Mehrfamilienhauses mit gleichmäßig gegliederter Fassade",
+    titel: "Straßenansicht, Waldkirch",
   },
   {
     name: "mfh-holzbalkone",
@@ -45,9 +45,9 @@ export const GALERIE: Bild[] = [
     titel: "Mehrfamilienhaus mit Holzbalkonen",
   },
   {
-    name: "haus-hang-garage",
-    alt: "Wohnhaus in Hanglage mit begrüntem Sockelgeschoss und Garage",
-    titel: "Hanglage mit begrüntem Sockel",
+    name: "haus-hang-teich",
+    alt: "Weißes Wohnhaus mit Solardach, Terrasse und Naturteich",
+    titel: "Wohnhaus mit Terrasse und Naturteich",
   },
   {
     name: "innen-kueche",

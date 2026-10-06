@@ -276,10 +276,10 @@ export function Home() {
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {LEISTUNGEN.map((l, i) => (
               <Reveal key={l.titel} delay={i * 70} className="h-full">
-                <article className="group h-full rounded-xl border border-brand-border bg-white p-7 shadow-karte transition duration-300 hover:-translate-y-1 hover:border-brand-petrol/40 hover:shadow-lg">
+                <article className="group h-full rounded-xl border border-brand-border bg-white p-6 shadow-karte sm:p-8 transition duration-300 hover:-translate-y-1 hover:border-brand-petrol/40 hover:shadow-lg">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-petrol/10 text-brand-petrol transition-colors group-hover:bg-brand-petrol group-hover:text-white">
                     {l.icon}
                   </div>
@@ -400,8 +400,8 @@ export function Home() {
           <Reveal>
             <Ueberschrift
               kicker="Eindrücke"
-              titel="Wohnhäuser aus Südbaden"
-              text="So sieht gutes Bauen in unserer Region aus: Einfamilienhäuser, Mehrfamilienhäuser und Wohnräume, die zum Ort und zu den Menschen passen."
+              titel="Wohnbauten aus Südbaden"
+              text="So sieht gutes Bauen in unserer Region aus: Mehrfamilienhäuser, Wohnhäuser und Wohnräume, die zum Ort und zu den Menschen passen."
             />
           </Reveal>
 
@@ -487,10 +487,10 @@ export function Home() {
             </Reveal>
             <Reveal delay={100} className="lg:col-span-2">
               <img
-                src={src("haus-holz-wiese", 800)}
-                srcSet={srcSet("haus-holz-wiese")}
+                src={src("mfh-waldkirch-hoehe", 800)}
+                srcSet={srcSet("mfh-waldkirch-hoehe")}
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                alt="Holzhaus mit Veranda auf einer Wiese in Südbaden"
+                alt="Mehrfamilienhaus mit weißer Fassade und Balkonen, von unten gegen den blauen Himmel fotografiert"
                 loading="lazy"
                 className="aspect-[4/3] w-full rounded-xl object-cover"
               />
@@ -543,10 +543,10 @@ export function Home() {
 
           <Reveal delay={100}>
             <img
-              src={src("haus-holz-garten", 800)}
-              srcSet={srcSet("haus-holz-garten")}
+              src={src("mfh-waldkirch-detail", 800)}
+              srcSet={srcSet("mfh-waldkirch-detail")}
               sizes="(min-width: 1024px) 45vw, 100vw"
-              alt="Holzhaus mit Veranda und Garten vor einer Hügellandschaft"
+              alt="Balkone eines weißen Mehrfamilienhauses mit Holzakzenten an der Dachkante, von unten fotografiert"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-xl object-cover shadow-karte"
             />
