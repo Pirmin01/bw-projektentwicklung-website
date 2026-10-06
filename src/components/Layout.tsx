@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const NAV_LINKS = [
   { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#bestand", label: "Bestand" },
   { href: "/#referenzen", label: "Eindrücke" },
   { href: "/#ablauf", label: "Ablauf" },
   { href: "/#ueber-uns", label: "Über uns" },
@@ -113,7 +114,7 @@ export function Layout() {
                 </a>
               </li>
               <li>
-                <a href="/#leistungen" className="hover:text-brand-petrol">
+                <a href="/#bestand" className="hover:text-brand-petrol">
                   Bestandsentwicklung
                 </a>
               </li>

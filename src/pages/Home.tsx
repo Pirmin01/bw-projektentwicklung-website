@@ -139,6 +139,25 @@ const SCHRITTE = [
   },
 ];
 
+const BESTAND_WEGE = [
+  {
+    titel: "Sanieren & modernisieren",
+    text: "Substanz erhalten, Energieeffizienz und Wohnqualität verbessern – wo ein Altbau Charakter und Wert hat.",
+  },
+  {
+    titel: "Aufstocken & erweitern",
+    text: "Zusätzlichen Wohnraum auf bestehender Fläche schaffen, statt neues Land zu verbrauchen.",
+  },
+  {
+    titel: "Aufteilen",
+    text: "Ein Gebäude in einzelne Wohnungen gliedern und damit neue Nutzungs- und Eigentumsmodelle ermöglichen.",
+  },
+  {
+    titel: "Abriss & Neubau",
+    text: "Wenn ein Ersatzneubau die wirtschaftlich und baulich bessere Lösung ist, sagen wir das offen.",
+  },
+];
+
 const SUCHPROFIL = [
   "Baugrundstücke und Entwicklungsflächen",
   "Bestandsobjekte mit Potenzial",
@@ -204,11 +223,12 @@ export function Home() {
             Projektentwicklung · Freiburg &amp; Umgebung
           </p>
           <h1 className="hero-einblenden mt-4 max-w-3xl text-4xl leading-[1.1] text-white! sm:text-6xl" style={{ animationDelay: "80ms" }}>
-            Aus Grundstücken wird Wohnraum.
+            Wohnraum entwickeln – im Neubau und im Bestand.
           </h1>
           <p className="hero-einblenden mt-6 max-w-xl text-lg leading-relaxed text-white/85" style={{ animationDelay: "160ms" }}>
             BW Projektentwicklung entwickelt Wohn- und Gewerbeimmobilien in Freiburg und Umgebung –
-            von der ersten Standortprüfung bis zur baureifen Planung.
+            vom unbebauten Grundstück bis zum Gebäude mit Geschichte, von der ersten Standortprüfung
+            bis zur baureifen Planung.
           </p>
           <div className="hero-einblenden mt-10 flex flex-wrap gap-4" style={{ animationDelay: "240ms" }}>
             <button
@@ -286,10 +306,10 @@ export function Home() {
                 className="col-span-3 h-full min-h-[22rem] w-full rounded-xl object-cover shadow-karte"
               />
               <img
-                src={src("bestand", 800)}
-                srcSet={srcSet("bestand")}
+                src={src("mfh-neubau", 800)}
+                srcSet={srcSet("mfh-neubau")}
                 sizes="(min-width: 1024px) 20vw, 40vw"
-                alt="Gelbes Bestandsgebäude mit Fensterläden"
+                alt="Fertiggestellter Neubau eines Mehrfamilienhauses mit weißer Fassade und dunklen Balkonen"
                 loading="lazy"
                 className="col-span-2 mt-12 h-[20rem] w-full rounded-xl object-cover shadow-karte"
               />
@@ -331,8 +351,51 @@ export function Home() {
         </div>
       </section>
 
+      {/* Bestandsentwicklung */}
+      <section id="bestand" className="scroll-mt-24 bg-white py-24 sm:py-28">
+        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2">
+          <Reveal>
+            <Ueberschrift
+              kicker="Bestandsentwicklung"
+              titel="Bestand mit Potenzial"
+              text="Nicht jedes Grundstück braucht einen Neubau. Bei bestehenden Gebäuden prüfen wir, welcher Weg den größten Wert schafft – und stellen die Möglichkeiten nachvollziehbar mit Zahlen gegenüber."
+            />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {BESTAND_WEGE.map((w) => (
+                <div key={w.titel} className="rounded-xl border border-brand-border bg-white p-5 shadow-karte">
+                  <h3 className="text-base">{w.titel}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-muted-fg">{w.text}</p>
+                </div>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => zumKontakt("grundstueck")}
+              className="mt-8 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90 active:scale-[0.98]"
+            >
+              Bestandsobjekt anbieten
+            </button>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <img
+              src={src("bestand", 1600)}
+              srcSet={srcSet("bestand")}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              alt="Gelbes Bestandsgebäude mit hellen Fensterläden an einer Dorfstraße"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-xl object-cover shadow-karte"
+            />
+            <p className="mt-3 text-sm text-brand-muted-fg">
+              Bestandsgebäude wie dieses haben Substanz und Lage – die Frage ist, welche Nutzung heute
+              am meisten daraus macht.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Galerie */}
-      <section id="referenzen" className="scroll-mt-24 bg-white py-24 sm:py-28">
+      <section id="referenzen" className="scroll-mt-24 bg-brand-surface py-24 sm:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <Ueberschrift
@@ -384,7 +447,7 @@ export function Home() {
       </section>
 
       {/* Ablauf */}
-      <section id="ablauf" className="scroll-mt-24 bg-brand-surface py-24 sm:py-28">
+      <section id="ablauf" className="scroll-mt-24 bg-white py-24 sm:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <Ueberschrift
@@ -460,9 +523,9 @@ export function Home() {
                 Grundstücksankauf über die Planung bis zur Baureife.
               </p>
               <p>
-                Aktuell liegt unser Schwerpunkt auf Wohnraum in Freiburg und Umgebung. Dazu kommen
-                Bestandsentwicklungen und Gewerbeimmobilien. Wir entwickeln dort, wo wir die Region,
-                die Märkte und die Menschen kennen.
+                Aktuell liegt unser Schwerpunkt auf Wohnraum in Freiburg und Umgebung – im Neubau
+                ebenso wie im Bestand. Dazu kommen Gewerbeimmobilien. Wir entwickeln dort, wo wir die
+                Region, die Märkte und die Menschen kennen.
               </p>
             </div>
 
