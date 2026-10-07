@@ -1,5 +1,3 @@
-import { Todo } from "../components/Todo";
-
 export function Impressum() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20">
@@ -8,21 +6,34 @@ export function Impressum() {
         Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
       </p>
 
+      <div className="mt-8 rounded-lg border border-brand-border border-l-4 border-l-brand-petrol bg-brand-surface p-5 text-sm leading-relaxed text-brand-charcoal">
+        <p className="font-semibold">Unternehmen im Aufbau</p>
+        <p className="mt-1 text-brand-muted-fg">
+          BW Projektentwicklung befindet sich derzeit im Aufbau. Rechtsform, Anschrift und
+          Registerangaben ergänzen wir an dieser Stelle, sobald die Gründung abgeschlossen ist.
+          Bei Fragen erreichen Sie uns schon jetzt unter{" "}
+          <a href="mailto:info@bwprojektentwicklung.de" className="text-brand-petrol hover:underline">
+            info@bwprojektentwicklung.de
+          </a>
+          .
+        </p>
+      </div>
+
       <div className="mt-10 space-y-10 text-base leading-relaxed text-brand-charcoal">
         <div>
           <h2 className="text-lg">Diensteanbieter</h2>
           <p className="mt-3">
-            BW Projektentwicklung <Todo>Rechtsform ergänzen</Todo>
+            BW Projektentwicklung (Unternehmen im Aufbau)
             <br />
-            <Todo>Straße und Hausnummer</Todo>
+            Rechtsform: wird mit Abschluss der Gründung ergänzt
             <br />
-            <Todo>PLZ und Ort</Todo>
+            Anschrift: wird mit Abschluss der Gründung ergänzt
           </p>
         </div>
 
         <div>
           <h2 className="text-lg">Vertreten durch</h2>
-          <p className="mt-3">Pirmin Burger, Pius Burger</p>
+          <p className="mt-3">Pirmin Burger, Pius Burger und Marius Wernet</p>
         </div>
 
         <div>
@@ -38,7 +49,7 @@ export function Impressum() {
             <br />
             Kontaktformular:{" "}
             <a href="/#kontakt" className="text-brand-petrol hover:underline">
-              bwprojektentwicklung.de/#kontakt
+              www.bwprojektentwicklung.de/#kontakt
             </a>
           </p>
         </div>
@@ -46,17 +57,15 @@ export function Impressum() {
         <div>
           <h2 className="text-lg">Registereintrag</h2>
           <p className="mt-3">
-            <Todo>
-              Registergericht und Registernummer ergänzen – oder als „in Gründung"
-              kennzeichnen, solange die Eintragung noch nicht erfolgt ist
-            </Todo>
+            Noch nicht eingetragen: Das Unternehmen befindet sich im Aufbau. Registergericht und
+            Registernummer ergänzen wir nach der Eintragung.
           </p>
         </div>
 
         <div>
           <h2 className="text-lg">Umsatzsteuer-Identifikationsnummer</h2>
           <p className="mt-3">
-            <Todo>USt-IdNr. gemäß § 27a UStG ergänzen, sobald erteilt</Todo>
+            Noch nicht erteilt. Wir ergänzen die Umsatzsteuer-Identifikationsnummer nach § 27a UStG, sobald sie vorliegt.
           </p>
         </div>
 
@@ -123,11 +132,6 @@ export function Impressum() {
           </p>
         </div>
       </div>
-
-      <p className="mt-14 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-        Die gelb markierten Angaben fehlen noch und müssen vor der Veröffentlichung
-        ergänzt werden. Eine anwaltliche Prüfung vor dem Go-Live ist empfehlenswert.
-      </p>
     </section>
   );
 }

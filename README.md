@@ -38,14 +38,23 @@ npm run build    # Typecheck + Produktions-Build nach dist/
 npm run lint
 ```
 
+## Stand der Rechtstexte
+
+Impressum und Datenschutzerklärung sind als „Unternehmen im Aufbau“ formuliert (neutraler Hinweis, keine
+gelben Platzhalter). **Sobald die Gründung steht, hier eintragen** (`src/pages/Impressum.tsx`, Abschnitt
+„Diensteanbieter“, „Registereintrag“, „Umsatzsteuer-Identifikationsnummer“; `src/pages/Datenschutz.tsx`,
+Abschnitt 1 „Verantwortlicher“) und den Hinweiskasten „Unternehmen im Aufbau“ entfernen:
+
+- Rechtsform, ladungsfähige Anschrift (nach § 5 DDG Pflicht), Registergericht und -nummer, USt-IdNr.
+- Telefonnummer (optional)
+
 ## Offen vor dem Umschalten der Domain `bwprojektentwicklung.de`
 
 Die Domain zeigt derzeit noch auf einen GoDaddy-Websitebaukasten; E-Mail läuft über Microsoft 365 (MX-Einträge
-dürfen beim Umstellen **nicht** angefasst werden). Zu klären, im Code als gelbe `TODO`-Markierungen sichtbar
-(`Impressum.tsx`, `Datenschutz.tsx`):
+dürfen beim Umstellen **nicht** angefasst werden).
 
-- Rechtsform, Anschrift, Registereintrag („in Gründung“?), USt-IdNr.
 - `RESEND_API_KEY` setzen und `bwprojektentwicklung.de` bei Resend verifizieren (DNS-Einträge)
-- Auftragsverarbeitung mit Resend prüfen und in der Datenschutzerklärung benennen
+- Auftragsverarbeitung mit Resend prüfen und die Garantien für die USA-Übermittlung in Abschnitt 5 der
+  Datenschutzerklärung benennen
 - Rechtliche Gegenprüfung von Impressum, Datenschutz und der Texte zur Bauausführung („Sie entscheiden, wer baut“)
 - Bildrechte/Bildnachweis der Fotos klären (`BILDNACHWEIS` in `src/lib/bilder.ts`)

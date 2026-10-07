@@ -1,5 +1,3 @@
-import { Todo } from "../components/Todo";
-
 export function Datenschutz() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20">
@@ -14,7 +12,7 @@ export function Datenschutz() {
           <p className="mt-3">
             Verantwortlich für die Datenverarbeitung auf dieser Website ist:
             <br />
-            BW Projektentwicklung <Todo>Rechtsform und Anschrift wie im Impressum</Todo>
+            BW Projektentwicklung (Unternehmen im Aufbau; Rechtsform und Anschrift ergänzen wir im Impressum, sobald die Gründung abgeschlossen ist)
             <br />
             E-Mail:{" "}
             <a
@@ -112,10 +110,8 @@ export function Datenschutz() {
             <strong>nicht in einer Datenbank gespeichert</strong> und nicht für andere
             Zwecke verwendet. Zum Versand der E-Mail setzen wir den Dienst Resend
             (Resend, Inc., USA) ein, der die Nachricht in unserem Auftrag zustellt.{" "}
-            <Todo>
-              Auftragsverarbeitungsvertrag mit Resend und Rechtsgrundlage der
-              USA-Übermittlung prüfen und hier benennen
-            </Todo>
+Dabei kann Ihre Nachricht in die USA übermittelt werden. Die Angaben zu den Garantien
+            für diese Übermittlung ergänzen wir mit Abschluss der Einrichtung des Dienstes.
           </p>
           <p className="mt-3">
             Zum Schutz vor automatisierten Anfragen (Spam) prüft das Formular technisch,
@@ -199,11 +195,6 @@ export function Datenschutz() {
           </p>
         </div>
       </div>
-
-      <p className="mt-14 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-        Die gelb markierten Angaben fehlen noch und müssen vor der Veröffentlichung
-        ergänzt werden. Eine anwaltliche Prüfung vor dem Go-Live ist empfehlenswert.
-      </p>
     </section>
   );
 }
