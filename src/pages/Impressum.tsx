@@ -49,7 +49,7 @@ export function Impressum() {
             <br />
             Kontaktformular:{" "}
             <a href="/#kontakt" className="text-brand-petrol hover:underline">
-              www.bwprojektentwicklung.de/#kontakt
+              bwprojektentwicklung.de/#kontakt
             </a>
           </p>
         </div>
